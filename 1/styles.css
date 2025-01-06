@@ -1,0 +1,168 @@
+/* 基础重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* 头部样式 */
+header {
+    background-color: #0a5275;
+    color: #ffffff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+header nav a.active,
+header nav a:hover {
+    background-color: #08415b;
+}
+
+/* 搜索和筛选区域 */
+.search-section,
+.filters {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-section form,
+.filters {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.search-section input[type="text"],
+.search-section input[type="number"],
+.filters input[type="range"],
+.filters select {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.search-section button,
+.filters button {
+    background-color: #0a5275;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-section button:hover,
+.filters button:hover {
+    background-color: #08415b;
+}
+
+/* 房源列表 */
+.listings {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.listing {
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.listing:hover {
+    transform: translateY(-5px);
+}
+
+.listing img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.info {
+    padding: 20px;
+}
+
+.info h3 {
+    margin: 0;
+    color: #0a5275;
+}
+
+.info p {
+    margin: 10px 0;
+    color: #666;
+}
+
+/* 按钮样式 */
+button {
+    display: inline-block;
+    background-color: #0a5275;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #08415b;
+}
+
+/* 页脚样式 */
+footer {
+    background-color: #0a5275;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 20px;
+    position: relative;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .listings {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        flex-direction: column;
+    }
+
+    header nav {
+        margin-top: 10px;
+    }
+
+    header nav a {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
